@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test – PS2</title>
+    <!-- Added CSS inline for simplicity -->
+    <style>
+        .collections .collection { display: none; }
+        .collections .collection.active { display: block; }
+    </style>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <h1>Test – PS2</h1>
+        <input type="search" id="search" placeholder="Hledat v otázkách / odpovědích…" autocomplete="off">
+        <button type="button" id="toggleCollection">Přepnout sbírku otázek</button>
+    </header>
+
+    <!-- Existing questions in collection1 -->
+    <div class="collections">
+        <div id="collection1" class="collection active">
+         <section>
+    <h2>Příkazy a práce s adresáři (Linux a Windows)</h2>
+    <ul>
+        <li><strong>Jak se v Linuxu vytvoří adresář?</strong><br>
+            <span class="correct">Příkaz mkdir (např. mkdir pokus)</span>
+        </li>
+        <li><strong>Jaký příkaz použijete v Linuxu pro změnu adresáře o úroveň výše?</strong><br>
+            <span class="correct">cd ..</span>
+        </li>
+        <li><strong>Změna aktuálního adresáře na jiný disk (Windows)?</strong><br>
+            <span class="correct">cd + celá cesta včetně označení disku (např. d:)</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Paměť, procesy a adresování</h2>
+    <ul>
+        <li><strong>Co je paměťový prostor procesu?</strong><br>
+            <span class="correct">Paměťový prostor, kde je operační systém / program</span>
+        </li>
+        <li><strong>Co neplatí pro deduplikaci?</strong><br>
+            <span class="correct">Že zálohuje nadbytečná data</span>
+        </li>
+        <li><strong>Co je emulace?</strong><br>
+            <span class="correct">Spouštění aplikací pro jinou platformu (simulace HW)</span>
+        </li>
+        <li><strong>Kooperativní multitasking?</strong><br>
+            <span class="correct">Řízení procesoru zajišťuje aplikace</span>
+        </li>
+        <li><strong>Preemptivní multitasking?</strong><br>
+            <span class="correct">Řízení procesoru zajišťuje operační systém</span>
+        </li>
+        <li><strong>Absolutní adresování?</strong><br>
+            <span class="correct">Adresa instrukce odpovídá adrese paměti</span>
+        </li>
+        <li><strong>Relativní adresování?</strong><br>
+            <span class="correct">Adresa se přičítá k hodnotě v registru</span>
+        </li>
+        <li><strong>Bázové adresování?</strong><br>
+            <span class="correct">Adresa je tvořena bází a offsetem</span>
+        </li>
+        <li><strong>Stránkování paměti?</strong><br>
+            <span class="correct">Paměť je rozdělena na stránky stejné velikosti</span>
+        </li>
+        <li><strong>Výhody stránkování na žádost?</strong><br>
+            <span class="correct">Efektivní využití paměti a procesoru</span>
+        </li>
+        <li><strong>Nevýhody stránkování na žádost?</strong><br>
+            <span class="correct">Větší režie, pomalý disk, nutnost výkonnějšího HW</span>
+        </li>
+        <li><strong>Tabulky UCB?</strong><br>
+            <span class="correct">Řízení a přidělování periferií</span>
+        </li>
+        <li><strong>Uživatelský režim procesoru?</strong><br>
+            <span class="correct">Provádí neprivilegované instrukce</span>
+        </li>
+        <li><strong>Režim jádra?</strong><br>
+            <span class="correct">Obsahuje privilegované instrukce a přístup k HW</span>
+        </li>
+        <li><strong>Co je Shell?</strong><br>
+            <span class="correct">Rozhraní mezi uživatelem a jádrem OS</span>
+        </li>
+        <li><strong>Rozdíl mezi procesem a procesorem?</strong><br>
+            <span class="correct">Procesor = hardware, proces = běžící program</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Souborové systémy a disky</h2>
+    <ul>
+        <li><strong>Co nepatří mezi úkoly systému souborů?</strong><br>
+            <span class="correct">Přidělování procesoru</span>
+        </li>
+        <li><strong>Symbolický systém souborů?</strong><br>
+            <span class="correct">Jmenný zápis souborů</span>
+        </li>
+        <li><strong>Logický systém souborů?</strong><br>
+            <span class="correct">Rozdělení souborů na logické části</span>
+        </li>
+        <li><strong>Fyzický systém souborů?</strong><br>
+            <span class="correct">Přidělování diskového prostoru</span>
+        </li>
+        <li><strong>Mapa souborů (Linux)?</strong><br>
+            <span class="correct">Každý soubor má vlastní tabulku</span>
+        </li>
+        <li><strong>Mapa disku (Windows/FAT)?</strong><br>
+            <span class="correct">Jedna tabulka pro celý disk</span>
+        </li>
+        <li><strong>Vlastnosti NTFS?</strong><br>
+            <span class="correct">Práva, kvóty, dlouhá jména, žurnálování</span>
+        </li>
+        <li><strong>Převod FAT32 → NTFS bez ztráty dat?</strong><br>
+            <span class="correct">Ano, pomocí příkazu convert</span>
+        </li>
+        <li><strong>Superblok (Linux)?</strong><br>
+            <span class="correct">Informace o disku a volných blocích</span>
+        </li>
+        <li><strong>i-node?</strong><br>
+            <span class="correct">Metadata souboru (ne název)</span>
+        </li>
+        <li><strong>Rozdíl ext2 vs ext3?</strong><br>
+            <span class="correct">ext3 má žurnálování</span>
+        </li>
+        <li><strong>Je adresář v Linuxu soubor?</strong><br>
+            <span class="correct">Ano</span>
+        </li>
+        <li><strong>Swap partition?</strong><br>
+            <span class="correct">Virtuální paměť na disku</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Práva a zabezpečení</h2>
+    <ul>
+        <li><strong>Co nepatří mezi základní práva?</strong><br>
+            <span class="correct">d (directory)</span>
+        </li>
+        <li><strong>Take Ownership?</strong><br>
+            <span class="correct">Možnost převzít vlastnictví souboru</span>
+        </li>
+        <li><strong>Práva 751?</strong><br>
+            <span class="correct">rwx / rx / x</span>
+        </li>
+        <li><strong>Práva 420?</strong><br>
+            <span class="correct">r / w / nic</span>
+        </li>
+        <li><strong>chmod – všem?</strong><br>
+            <span class="correct">a</span>
+        </li>
+        <li><strong>chmod – ostatní?</strong><br>
+            <span class="correct">o</span>
+        </li>
+        <li><strong>Ochrana souborů?</strong><br>
+            <span class="correct">Práva, šifrování, přístup</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Další pojmy (Odkazy, sítě, virtualizace)</h2>
+    <ul>
+        <li><strong>Symbolický odkaz?</strong><br>
+            <span class="correct">Odkaz na název souboru</span>
+        </li>
+        <li><strong>Fyzický odkaz?</strong><br>
+            <span class="correct">Ukazuje přímo na data (i-node)</span>
+        </li>
+        <li><strong>Deadlock?</strong><br>
+            <span class="correct">Procesy čekají jeden na druhého v cyklu</span>
+        </li>
+        <li><strong>Co není podmínka deadlocku?</strong><br>
+            <span class="correct">Producent–konzument</span>
+        </li>
+        <li><strong>Stárnutí procesů?</strong><br>
+            <span class="correct">Zvyšování priority čekajících procesů</span>
+        </li>
+        <li><strong>Vzájemné vyloučení?</strong><br>
+            <span class="correct">Do kritické sekce smí jen jeden proces</span>
+        </li>
+        <li><strong>Producent–konzument?</strong><br>
+            <span class="correct">Asynchronní komunikace</span>
+        </li>
+        <li><strong>NFS?</strong><br>
+            <span class="correct">Sdílení souborů po síti</span>
+        </li>
+        <li><strong>NIS?</strong><br>
+            <span class="correct">Centrální správa uživatelských informací</span>
+        </li>
+        <li><strong>Samba?</strong><br>
+            <span class="correct">Sdílení souborů a tiskáren s Windows</span>
+        </li>
+        <li><strong>/etc v Linuxu?</strong><br>
+            <span class="correct">Konfigurační soubory</span>
+        </li>
+        <li><strong>Paravirtualizace?</strong><br>
+            <span class="correct">Částečná virtualizace</span>
+        </li>
+    </ul>
+</section>
+        </div>
+
+        <!-- New questions added in collection2 -->
+        <div id="collection2" class="collection">
+  <section>
+    <h2>jQuery a JavaScript</h2>
+    <ul>
+        <li><strong>Co dělá metoda <code>.hide()</code>?</strong><br>
+            <span class="correct">Schová aktuální prvek</span>
+        </li>
+        <li><strong>Co dělá metoda <code>.toggle()</code>?</strong><br>
+            <span class="correct">Přepíná viditelnost prvku (zobrazí / skryje)</span>
+        </li>
+        <li><strong>Kdy se provede událost <code>submit</code>?</strong><br>
+            <span class="correct">Při odesílání formuláře</span>
+        </li>
+        <li><strong>K čemu slouží callback?</strong><br>
+            <span class="correct">Ke spuštění další funkce (např. po dokončení animace)</span>
+        </li>
+        <li><strong>Co dělá metoda <code>.val()</code>?</strong><br>
+            <span class="correct">Získá hodnotu ze vstupního pole formuláře (inputu)</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Symfony a PHP</h2>
+    <ul>
+        <li><strong>Ve kterém souboru se v Symfony 6 nastavuje databáze?</strong><br>
+            <span class="correct">V souboru <code>.env</code></span>
+        </li>
+        <li><strong>Co udělá příkaz <code>doctrine:migrations:migrate</code>?</strong><br>
+            <span class="correct">Připraví a provede SQL dotazy pro vytvoření tabulek</span>
+        </li>
+        <li><strong>Co dělá funkce <code>dump()</code> v Symfony?</strong><br>
+            <span class="correct">Vypisuje hodnoty proměnných a polí (debug)</span>
+        </li>
+        <li><strong>Jakým způsobem se předávají data z kontroleru do šablony?</strong><br>
+            <span class="correct">Pomocí pole (array)</span>
+        </li>
+        <li><strong>V jakém souboru se nastavují oprávnění uživatelů a routování (security)?</strong><br>
+            <span class="correct">security.yaml</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Twig (šablonovací systém)</h2>
+    <ul>
+        <li><strong>Může Twig obsahovat cykly?</strong><br>
+            <span class="correct">Ano</span>
+        </li>
+        <li><strong>Lze v Twigu používat podmínky?</strong><br>
+            <span class="correct">Ano</span>
+        </li>
+        <li><strong>Co zobrazují dvojité složené závorky <code>{{ }}</code>?</strong><br>
+            <span class="correct">Proměnnou nebo datovou strukturu</span>
+        </li>
+        <li><strong>Jakou příponu má soubor šablony v Symfony?</strong><br>
+            <span class="correct">.twig</span>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Obecné technologie, HTTP a formáty</h2>
+    <ul>
+        <li><strong>Co je to DOM?</strong><br>
+            <span class="correct">Document Object Model – způsob procházení dokumentu</span>
+        </li>
+        <li><strong>Jak se jmenuje soubor v Apache pro přesměrování nebo podstrčení stránky?</strong><br>
+            <span class="correct">.htaccess</span>
+        </li>
+        <li><strong>Jakou hodnotu vrací <code>readyState</code> v AJAXu, když je požadavek dokončen?</strong><br>
+            <span class="correct">4</span>
+        </li>
+        <li><strong>Jaký HTTP kód vrací server, pokud je vše v pořádku?</strong><br>
+            <span class="correct">200</span>
+        </li>
+        <li><strong>Jak se nazývá formát dat se stromovou strukturou zobrazený na obrazovce?</strong><br>
+            <span class="correct">XML</span>
+        </li>
+        <li><strong>Jak se nazývá architektura rozdělující aplikaci na model, pohled a logiku?</strong><br>
+            <span class="correct">MVC (Model–View–Controller)</span>
+        </li>
+    </ul>
+</section>
+
+ </div>
+
+        <!-- End of collection2 footer -->
+    
+        <footer>
+                <a href="https://github.com/0ndraM">©0ndra_m_</a>
+            </footer>
+   
+
+</body>
+</html>
